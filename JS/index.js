@@ -1,9 +1,12 @@
-const appender = () =>{
+const appender = e =>{
     let inp = document.getElementById('inpType');
     let val = document.createTextNode(inp.value);
     let holder = document.getElementById('holder');
     let mainComp = document.createElement('div');
     let btn = document.createElement('button');
+    if(inp.value == ''){
+        e.preventefault
+    }else{
     //alert
     mainComp.classList.add('alert', 'alert-dismissible' , 'fade' , 'show');
     mainComp.setAttribute('role','alert');
@@ -15,6 +18,7 @@ const appender = () =>{
     mainComp.appendChild(val);
     holder.appendChild(mainComp);
     inp.value = ''
+    }
 }   
 
 //clock
