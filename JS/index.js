@@ -1,11 +1,11 @@
-const appender = e =>{
+const appender = event =>{
     let inp = document.getElementById('inpType');
     let val = document.createTextNode(inp.value);
     let holder = document.getElementById('holder');
     let mainComp = document.createElement('div');
     let btn = document.createElement('button');
     if(inp.value == ''){
-        e.preventefault
+        event.preventDefault();
     }else{
     //alert
     mainComp.classList.add('alert', 'alert-dismissible' , 'fade' , 'show');
@@ -19,10 +19,11 @@ const appender = e =>{
     holder.appendChild(mainComp);
     inp.value = ''
     }
-}   
+}
+
 
 //clock
-const clock = () =>{
+ const clock = () =>{
     let date = new Date();
     let h = date.getHours();
     let m = date.getMinutes();
