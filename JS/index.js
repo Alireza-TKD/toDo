@@ -20,10 +20,8 @@ const appender = event =>{
     inp.value = ''
     }
 }
-
-
 //clock
- const clock = () =>{
+const clock = () =>{
     let date = new Date();
     let h = date.getHours();
     let m = date.getMinutes();
@@ -35,3 +33,4 @@ const appender = event =>{
     colHolder.innerHTML = `${h} : ${m} : ${s}` ;
 }
 setInterval(clock , 1000);
+
